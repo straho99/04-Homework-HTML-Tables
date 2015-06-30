@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Calculator</title>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            width: 25%;
+        }
+
+        td {
+            border: 1px solid black;
+            height: 80px;
+        }
+        
+        .middle-font {
+            font-size: 24pt;
+            font-weight: bold;
+            font-family: Arial,sans-serif;
+            color: blue;
+        }
+
+        .center-middle {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .button {
+            width: 98%;
+            height: 98%;
+            border: 1px solid grey;
+            border-radius: 3px;
+            background: linear-gradient(#d5cdcd, #808080);
+            font-family: Arial,sans-serif;
+            color: black;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                width: 98%;
+                height: 98%;
+                border: 1px solid #ffd800;
+                border-radius: 3px;
+                background: linear-gradient(#d5cdcd, #808080);
+                font-family: Arial,sans-serif;
+                color: black;
+            }
+
+        .formula {
+            width: 95%;
+            height: 98%;
+            border: 1px solid #ff0000;
+            background: white;
+            font-family: Arial,sans-serif;
+            color: black;
+            font-size:16pt;
+            text-indent: 5px;
+            text-align: right;
+            padding:2%;
+        }
+    </style>
+    <script type="text/javascript">
+        function updateFormula(element) {
+            var formulaBar = document.getElementById("formula-bar");
+            var caller = document.getElementById(element.id);
+            if (element.value == "C") {
+                clearFormulaBar();
+            }
+            else if (element.value == "=") {
+                evaluateFormula();
+            }
+            else {
+                var newValue = caller.value;
+                var oldValue = formulaBar.value;
+                formulaBar.value = oldValue + newValue;
+            }
+        }
+        function clearFormulaBar() {
+            var formulaBar = document.getElementById("formula-bar");
+            formulaBar.value = "";
+        }
+        function evaluateFormula() {
+            var formulaBar = document.getElementById("formula-bar");
+            var result = eval(formulaBar.value);
+            formulaBar.value = result;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr><td colspan="4" class="center-middle"><input type="text" class="formula" value="" id="formula-bar"/></td></tr>
+        <tr>
+            <td width="25%" class="center-middle big-font"><button value="1" class="middle-font button" id="button1" onclick="updateFormula(this)">1</button></td>
+            <td width="25%" class="center-middle big-font"><button value="2" class="middle-font button" id="button2" onclick="updateFormula(this)">2</button></td>
+            <td width="25%" class="center-middle big-font"><button value="3" class="middle-font button" id="button3" onclick="updateFormula(this)">3</button></td>
+            <td width="25%" class="center-middle big-font"><button value=" + " class="middle-font button" id="buttonPlus" onclick="updateFormula(this)">+</button></td>
+        </tr>
+        <tr>
+            <td width="25%" class="center-middle big-font"><button value="4" class="middle-font button" id="button4" onclick="updateFormula(this)">4</button></td>
+            <td width="25%" class="center-middle big-font"><button value="5" class="middle-font button" id="button5" onclick="updateFormula(this)">5</button></td>
+            <td width="25%" class="center-middle big-font"><button value="6" class="middle-font button" id="button6" onclick="updateFormula(this)">6</button></td>
+            <td width="25%" class="center-middle big-font"><button value=" - " class="middle-font button" id="buttonMinus" onclick="updateFormula(this)">-</button></td>
+        </tr>
+        <tr>
+            <td width="25%" class="center-middle big-font"><button value="7" class="middle-font button" id="button7" onclick="updateFormula(this)">7</button></td>
+            <td width="25%" class="center-middle big-font"><button value="8" class="middle-font button" id="button8" onclick="updateFormula(this)">8</button></td>
+            <td width="25%" class="center-middle big-font"><button value="9" class="middle-font button" id="button9" onclick="updateFormula(this)">9</button></td>
+            <td width="25%" class="center-middle big-font"><button value=" * " class="middle-font button" id="buttonMultiply" onclick="updateFormula(this)">*</button></td>
+        </tr>
+        <tr>
+            <td width="25%" class="center-middle big-font"><button value="C" class="middle-font button" id="buttonClear" onclick="updateFormula(this)">C</button></td>
+            <td width="25%" class="center-middle big-font"><button value="0" class="middle-font button" id="button0" onclick="updateFormula(this)">0</button></td>
+            <td width="25%" class="center-middle big-font"><button value="=" class="middle-font button" id="buttonEqual" onclick="updateFormula(this)">=</button></td>
+            <td width="25%" class="center-middle big-font"><button value=" / " class="middle-font button" id="buttonDivide" onclick="updateFormula(this)">/</button></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Life at SoftUni</title>
+    <style type="text/css">
+        table {
+            border: 1px solid black;
+            width: 40%;
+        }
+
+        td {
+            border: 1px solid black;
+            height: 80px;
+        }
+
+        .right-middle {
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        .center-middle {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .big-font {
+            font-size: 32pt;
+            font-weight: bold;
+            font-family: Arial,sans-serif;
+            color: blue;
+        }
+
+        .middle-font {
+            font-size: 24pt;
+            font-weight: bold;
+            font-family: Arial,sans-serif;
+            color: blue;
+        }
+
+        .normal-font {
+            font-size: 18pt;
+            font-family: Arial,sans-serif;
+            color: blue;
+            /*font-weight: bold;*/
+        }
+
+        .small-font {
+            font-size: 14pt;
+            /*font-weight: bold;*/
+            font-family: Arial,sans-serif;
+            color: blue;
+        }
+        .uppercase-font {
+            text-transform: uppercase;
+            font-family: Arial,sans-serif;
+            color: blue;
+        }
+        .button {
+            width: 98%;
+            height:98%;
+            border: 1px solid grey;
+            border-radius: 3px;
+            background: linear-gradient(#d5cdcd, #808080);
+            font-family: Arial,sans-serif;
+            color: blue;
+            cursor:pointer;
+        }
+
+        .button:hover {
+            width: 98%;
+            height: 98%;
+            border: 1px solid #ffd800;
+            border-radius: 3px;
+            background: linear-gradient(#d5cdcd, #808080);
+            font-family: Arial,sans-serif;
+            color: blue;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4" class="center-middle big-font"><button onclick="window.open('http://softuni.bg')" class="big-font button">SoftUni Life</button></td>
+        </tr>
+        <tr>
+            <td colspan="2" width="50%" class="normal-font center-middle"><button onclick="window.open('http://google.bg')" class="normal-font uppercase-font button">Google</button></td>
+            <td colspan="2" width="50%" class="normal-font center-middle"><button onclick="window.open('http://github.com')" class="normal-font button">GitHub</button></td>
+        </tr>
+        <tr>
+            <td class="center-middle normal-font"><button onclick="window.open('http://facebook.com')" class="normal-font button">FB</button></td>
+            <td class="center-middle normal-font"><button onclick="window.open('http://mail.google.com')" class="normal-font button">GMail</button></td>
+            <td class="center-middle normal-font"><button onclick="window.open('http://youtube.com')" class="normal-font button">YouTube</button></td>
+            <td class="center-middle normal-font"><button onclick="window.open('http://dir.bg')" class="normal-font button">2048</button></td>
+        </tr>
+        <tr>
+            <td class="center-middle normal-font"><button onclick="window.open('http://happy.bg')" class="normal-font button">Food</button></td>
+            <td colspan="2" class="center-middle normal-font"><button onclick="window.open('http://tetris.com')" class="normal-font button">Game</button></td>
+            <td>
+                <table style="width:100%;">
+                    <tr><td class="center-middle small-font"><button onclick="window.open('http://twitter.com')" class="small-font button">Social Life</button></td></tr>
+                    <tr><td class="center-middle small-font"><button onclick="window.open('http://btv.bg')" class="small-font button">Sleep</button></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="right-middle middle-font"><button onclick="window.open('http://zagorka.bg')" class="middle-font right-middle button">Beer>>></button></td>
+            <td class="normal-font"><button onclick="window.open('http://bsp.bg')" class="normal-font uppercase-font button">WC</button></td>
+        </tr>
+    </table>
+</body>
+</html>

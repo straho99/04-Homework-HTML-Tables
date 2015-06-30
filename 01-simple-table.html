@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>A simple table</title>
+    <style type="text/css">
+        table {
+            width: 400px;
+            height: auto;
+            border-collapse:collapse;
+            border: 1px solid black;
+        }
+        #header {
+            font-family: Arial, sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1em;
+            text-align: left;
+            padding-bottom: 40px;
+        }
+        td {
+            font-family: Arial, sans-serif;
+            padding: 5px;
+            margin:0;
+            height:auto;
+            /*border: 1px solid black;*/
+            width:auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th colspan="2" id="header">Software University</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2"><a href="https://softuni.bg"><img src="images/softuni.png" width="150px" /></a></td>
+                <td><strong>Accessible and high quality software education.</strong></td>
+            </tr>
+            <tr>
+                <td>Our mission is to make people we train true professionals
+                in the software industry and support them in finding employment.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
